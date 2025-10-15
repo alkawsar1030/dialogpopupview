@@ -57,6 +57,31 @@ class DialogPopupView extends StatelessWidget {
               );
             }, child: Text('Click on Simple Dialog'),
             ),
+            OutlinedButton(onPressed: (){
+              showModalBottomSheet(
+                  context: context,
+                  builder: (context)=>Padding(
+
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Container(
+                      width: 350,
+                      height: 300,
+
+
+                      child: Column(
+
+                        children: [
+                          Text('Write Here Your Script'),
+                          Icon(Icons.account_balance_wallet),
+
+                        ],
+                      ),
+
+                    ),
+                  ),
+              );
+            }, child: Text('click'),
+            ),
           ],
         ),
       )
