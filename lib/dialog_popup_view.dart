@@ -24,6 +24,39 @@ class DialogPopupView extends StatelessWidget {
               ));
             }, child: Text('clickME'),
             ),
+            ElevatedButton(onPressed: (){
+             showDialog(context: context, builder: (context)=>SimpleDialog(
+               title: Text('selec Item'),
+               children: [
+
+               SimpleDialogOption(
+                child: Text('dhaka'),
+                 onPressed: (){
+                  print("You Have Choosen Dhaka");
+                 },
+               ),SimpleDialogOption(
+                child: Text('khulna'),
+                 onPressed: (){
+                  print("You Have Choosen Khulna");
+                 },
+               ),SimpleDialogOption(
+                child: Text('bhola'),
+                 onPressed: (){
+                  print("You Have Choosen BHola");
+                 },
+               ),SimpleDialogOption(
+                child: Text('bangladesh'),
+                 onPressed: (){
+                  print("You Have Choosen Bangladesh");
+                 },
+               ),
+               ],
+
+               backgroundColor: Colors.lightGreen,
+             ),
+              );
+            }, child: Text('Click on Simple Dialog'),
+            ),
           ],
         ),
       )
